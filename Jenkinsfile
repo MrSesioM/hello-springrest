@@ -26,7 +26,7 @@ pipeline {
 	stage('Deploy application') {
             steps {
                 dir("eb-springrest") {
-			sh 'eb create jenkins-lucatic'
+			sh 'eb build'
 		}
             }
         }
