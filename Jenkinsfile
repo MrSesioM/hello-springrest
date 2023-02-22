@@ -25,8 +25,10 @@ pipeline {
         }
 	stage('Deploy application') {
             steps {
-                dir("eb-springrest") {
-			sh 'eb build'
+                withAWS(credentials: 'AWS Credentials') {
+                    dir("eb-springrest") {
+			sh 'eb create jenkins-lucatic'
+                    }
 		}
             }
         }
