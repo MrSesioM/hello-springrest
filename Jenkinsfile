@@ -23,5 +23,12 @@ pipeline {
 		sh 'docker-compose push'
             }
         }
+	stage('Deploy application') {
+            steps {
+                dir("eb-springrest") {
+			sh 'eb create jenkins-lucatic'
+		}
+            }
+        }
     }
 }
