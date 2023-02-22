@@ -19,6 +19,7 @@ pipeline {
             steps {
                 sh 'VERSION=1.0.${BUILD_NUMBER} docker-compose build'
 	        sh 'VERSION=1.0.${BUILD_NUMBER} docker-compose push'
+		sh 'docker-compose push'
             }
         }
     }
