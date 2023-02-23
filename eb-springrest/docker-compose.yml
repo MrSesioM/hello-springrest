@@ -3,5 +3,5 @@ services:
   springrest:
     image: ghcr.io/mrsesiom/springrest:${VERSION:-latest}
     ports:
-      - "8000:8000"
+      - "80:8080"
 
